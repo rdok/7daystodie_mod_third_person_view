@@ -22,6 +22,9 @@ Enables the third person view mode.
 [*] Game Version: 1.0. Install with [url=https://www.nexusmods.com/about/vortex/]Vortex[/url].
 [/list]
 [size=5]Changelog[/size]
+[size=3]v1.0.1 24-Aug-24[/size]
+[list]
+[*] fix: Camera not changing to third person view, when having a first person view and getting on a vehicle.[/list]
 [size=3]v1.0.0 24-Aug-24[/size]
 [list]
 [*] feat: Enable the change camera used in edit mode without requiring the debug mode on.
@@ -29,4 +32,5 @@ Enables the third person view mode.
 [size=5]Backlog[/size]
 [list]
 [*] After releasing the zoom in button holding a weapon, the game snaps the camera too fast. Smoothen this out to improve the UX.
+[*] Provide the options to zoom in or out.
 [/list]

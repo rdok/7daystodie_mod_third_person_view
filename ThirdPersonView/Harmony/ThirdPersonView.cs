@@ -5,32 +5,45 @@ namespace ThirdPersonView.Harmony
     [HarmonyPatch(typeof(PlayerMoveController), nameof(PlayerMoveController.Update))]
     public class SetThirdPersonView
     {
-        private static bool? isFirstPersonView = null;
-        private static bool cameraChangeHandled = false;
+        private static bool? _isFirstPersonView = null;
+        private static bool _cameraChangeHandled = false;
 
         public static void Postfix(PlayerMoveController __instance)
         {
             var playerInput = __instance.playerInput;
+            var entityPlayerLocal = __instance.entityPlayerLocal;
 
-            if (isFirstPersonView == null)
+            var isDrivingVehicle = entityPlayerLocal.AttachedToEntity != null;
+
+            if (isDrivingVehicle)
             {
-                isFirstPersonView = __instance.entityPlayerLocal.bFirstPersonView;
+                if (!entityPlayerLocal.bFirstPersonView) return;
+
+                entityPlayerLocal.SwitchFirstPersonView(false); // Switch to third-person view
+                _isFirstPersonView = false;
+
+                return;
             }
 
-            if (playerInput.CameraChange.IsPressed && !cameraChangeHandled)
+            if (_isFirstPersonView == null)
             {
-                isFirstPersonView = !isFirstPersonView;
-                cameraChangeHandled = true;
+                _isFirstPersonView = entityPlayerLocal.bFirstPersonView;
+            }
+
+            if (playerInput.CameraChange.IsPressed && !_cameraChangeHandled)
+            {
+                _isFirstPersonView = !_isFirstPersonView;
+                _cameraChangeHandled = true;
             }
 
             if (!playerInput.CameraChange.IsPressed)
             {
-                cameraChangeHandled = false;
+                _cameraChangeHandled = false;
             }
 
-            if (__instance.entityPlayerLocal.bFirstPersonView != isFirstPersonView)
+            if (entityPlayerLocal.bFirstPersonView != _isFirstPersonView)
             {
-                __instance.entityPlayerLocal.SwitchFirstPersonView(isFirstPersonView.Value);
+                entityPlayerLocal.SwitchFirstPersonView(_isFirstPersonView.Value);
             }
         }
     }
