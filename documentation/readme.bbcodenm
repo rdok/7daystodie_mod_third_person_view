@@ -10,11 +10,11 @@ Enables the third person view mode.
 [size=5]Features[/size]
 [list]
 [*] Activates third-person view mode with the Alt key.
-[*] It's highly recommended to enable [url=https://www.nexusmods.com/7daystodie/mods/5640]Dot Crosshair[/url] and [url=https://www.nexusmods.com/7daystodie/mods/5601]Immersive Crosshair[/url] for better experience while in third-person mode. 
+[*] It's highly recommended to enable [url=https://www.nexusmods.com/7daystodie/mods/5640]Dot Crosshair[/url] and [url=https://www.nexusmods.com/7daystodie/mods/5601]Immersive Crosshair[/url] for a better experience while in third-person mode. 
 [list]
 [*] These mods will properly hide the crosshair when in first person view, while enabling when in third person view, giving you the best of both worlds. 
 [*] Refer to the [url=https://staticdelivery.nexusmods.com/mods/1059/images/5903/5903-1724496760-686489418.jpeg]screenshots tab[/url] for examples.[/list]
-[*] Note that the third-person view mod is incomplete, as the game developers have not fully implemented it. Some features, like animations (e.g., bow attacks), are unfinished.
+[*] Note that the third-person view is incomplete, as the game developers have not fully implemented it. Some features, like bow animations, are unfinished (static). Firearms and melee look good enough.
 [*] To remap the Alt key: go to Options -> Keyboard/Mouse -> Edit Mode -> Change Camera.
 [list]
 [*] This is especially recommended if you use Alt+Tab to switch between windows.
