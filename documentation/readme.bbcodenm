@@ -14,12 +14,16 @@ Enables the third person view mode.
 [list]
 [*] These mods will properly hide the crosshair when in first person view, while enabling when in third person view, giving you the best of both worlds. 
 [*] Refer to the [url=https://staticdelivery.nexusmods.com/mods/1059/images/5903/5903-1724496760-686489418.jpeg]screenshots tab[/url] for examples.[/list]
-[*] Note that the third-person view is incomplete, as the game developers have not fully implemented it. Some features, like bow animations, are unfinished (static). Firearms and melee look good enough.
 [*] To remap the Alt key: go to Options -> Keyboard/Mouse -> Edit Mode -> Change Camera.
 [list]
 [*] This is especially recommended if you use Alt+Tab to switch between windows.
 [*] If you would like controller support, please post a request, specifying which button you'd prefer for mapping.[/list]
 [*] Enables the step sounds, which have been disabled by the game developers when not in first person view.  
+[*] [b]Note that the third-person view is incomplete, as the game developers have not fully implemented it:[/b]
+[list]
+[*] Bow animations, are unfinished (static). 
+[*] Although knife animations are working, they are not hitting anything. Thanks to [url=https://www.nexusmods.com/7daystodie/mods/5903?tab=posts&jump_to_comment=143233440]lM3Rl[/url] for reporting this issue.
+[*] I'll update this as we find more issues; once we have confirmed all the issues, I'll further patch this mod to fix everything code related; for the missing animations someone else with animation expertise can create a mod for that.[/list]
 [*] Game Version: 1.0. Install with [url=https://www.nexusmods.com/about/vortex/]Vortex[/url].
 [/list]
 [size=5]Changelog[/size]
@@ -34,7 +38,13 @@ Enables the third person view mode.
 [*] feat: Enable the change camera used in edit mode without requiring the debug mode on.
 [/list]
 [size=5]Backlog[/size]
+[quote]
+Ordered by priority
+[/quote]
 [list]
+[*] Support controllers: Use [url=https://www.nexusmods.com/7daystodie/mods/5903?tab=posts&jump_to_comment=143236233]right on the d-pad[/url] to toggle the view.
+[*] Knife attacks are not interacting/hitting.
 [*] After releasing the zoom in button holding a weapon, the game snaps the camera too fast. Smoothen this out to improve the UX.
 [*] Provide the options to zoom in or out.
+[*] Missing animations for bows; help needed, or some other developer create this mod separately.
 [/list]
