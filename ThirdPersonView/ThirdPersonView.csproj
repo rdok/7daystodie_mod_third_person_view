@@ -19,10 +19,10 @@
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
-        <DebugSymbols>true</DebugSymbols>  
+        <DebugSymbols>true</DebugSymbols>
         <DebugType>full</DebugType>
         <Optimize>false</Optimize>
-        <OutputPath>..\..\..\..\vortex_udf_7_days_to_die\Mods\ThirdPersonView</OutputPath>
+        <OutputPath>..\..\..\..\vortex_udf_7_days_to_die\Mods\ZZZZ_ThirdPersonView</OutputPath>
         <DefineConstants>DEBUG;TRACE</DefineConstants>
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
@@ -38,14 +38,16 @@
         <WarningLevel>3</WarningLevel>
         <OutputPath>bin\Main\</OutputPath>
         <AbsoluteOutputPath>$(MSBuildProjectDirectory)\$(OutputPath)</AbsoluteOutputPath>
-        <ModVersion>1.0.1</ModVersion>
+        <ModVersion>1.1.0</ModVersion>
         <ModName>ThirdPersonView</ModName>
     </PropertyGroup>
 
     <ItemGroup>
+        <Compile Include="Harmony\PlayStepsSound.cs" />
+        <Compile Include="Harmony\UpdateStepsSoundPatch.cs" />
         <Compile Include="Harmony\Logger.cs"/>
         <Compile Include="Harmony\Main.cs"/>
-        <Compile Include="Harmony\ThirdPersonView.cs" />
+        <Compile Include="Harmony\ThirdPersonView.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
 
@@ -61,7 +63,7 @@
             <Private>False</Private>
         </Reference>
         <Reference Include="InControl">
-          <HintPath>..\..\..\..\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\InControl.dll</HintPath>
+            <HintPath>..\..\..\..\Steam\steamapps\common\7 Days To Die\7DaysToDie_Data\Managed\InControl.dll</HintPath>
             <Private>False</Private>
         </Reference>
         <Reference Include="UnityEngine.CoreModule">

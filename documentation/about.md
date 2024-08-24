@@ -15,9 +15,12 @@
 - To remap the Alt key: go to Options -> Keyboard/Mouse -> Edit Mode -> Change Camera.
   - This is especially recommended if you use Alt+Tab to switch between windows.
   - If you would like controller support, please post a request, specifying which button you'd prefer for mapping.
+- Enables the step sounds, which have been disabled by the game developers when no in first person.  
 - Game Version: 1.0. Install with [Vortex](https://www.nexusmods.com/about/vortex/).
 
 ## Changelog
+#### v1.1.0 24-Aug-24
+- feat: Enables the step sounds.
 #### v1.0.1 24-Aug-24
 - fix: Camera not changing to third person view, when having a first person view and getting on a vehicle.
 #### v1.0.0 24-Aug-24
