@@ -1,0 +1,22 @@
+# 7 Days to Die Mod - Third Person View
+[![nexus-mods-collection-immersive-hud](https://img.shields.io/badge/Nexus%20Mods%20Collection-Immersive%20HUD%20-orange?style=flat-square&logo=spinrilla)](https://next.nexusmods.com/7daystodie/collections/epfqzi) [![nexus-mods-page](https://img.shields.io/badge/Nexus%20Mod-Third%20Person%20View%20-orange?style=flat-square&logo=spinrilla)](https://www.nexusmods.com/7daystodie/mods/5716) [![github-repository](https://img.shields.io/badge/GitHub-Repository-green?style=flat-square&logo=github)](https://github.com/rdok/7daystodie_mod_third_person_view)
+
+> Enables the third person view mode.    
+> **EAC:** This mod uses custom code that is not compatible with Easy Anti-Cheat.
+ 
+[![Third Person View](https://raw.githubusercontent.com/rdok/7daystodie_mod_third_person_view/main/documentation/showcase.gif)](https://www.nexusmods.com/7daystodie/mods/5716)
+
+## Features
+- Enables the third person view mode, using Alt keyboard button.
+- Note that the game developers have not added all animations. E.g. bow animations attacks are static.
+- To remap the Alt button: Options -> Keyboard/Mouse -> Edit Mode -> Change Camera
+  - If you'd like controller support please make a post including which button should that be mapped to.
+- Game Version: 1.0. Install with [Vortex](https://www.nexusmods.com/about/vortex/).
+
+## Changelog
+#### v1.0.0 24-Aug-24
+- feat: Enable the change camera used in edit mode without requiring the debug mode on.
+
+## Backlog
+- After releasing the zoom in button holding a weapon, the game snaps the camera too fast. Smoothen this out to improve the UX.
+
