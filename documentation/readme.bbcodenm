@@ -13,6 +13,7 @@ Enables the third person view mode.
 [*] Note that the game developers have not added all animations. E.g. bow animations attacks are static.
 [*] To remap the Alt button: Options -> Keyboard/Mouse -> Edit Mode -> Change Camera
 [list]
+[*] This is highly recommended if you use alt+tab to switch windows. 
 [*] If you'd like controller support please make a post including which button should that be mapped to.[/list]
 [*] Game Version: 1.0. Install with [url=https://www.nexusmods.com/about/vortex/]Vortex[/url].
 [/list]
