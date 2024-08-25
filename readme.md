@@ -10,23 +10,33 @@
 ## Features
 - Activates third-person view mode with the Alt key.
   - Support for controllers: double tap whatever you sneak toggle is mapped to. By default, is the right analog stick.
-- It's highly recommended to enable [Dot Crosshair](https://www.nexusmods.com/7daystodie/mods/5640) and [Immersive Crosshair](https://www.nexusmods.com/7daystodie/mods/5601) for a better experience while in third-person mode. 
-  - These mods will properly hide the crosshair when in first person view, while enabling when in third person view, giving you the best of both worlds. 
-  - Refer to the [screenshots tab](https://staticdelivery.nexusmods.com/mods/1059/images/5903/5903-1724496760-686489418.jpeg) for examples.
 - To remap the Alt key: go to Options -> Keyboard/Mouse -> Edit Mode -> Change Camera.
   - This is especially recommended if you use Alt+Tab to switch between windows.
   - If you are interested to remap this for the controller as well, please leave a comment with your use case.
-- **Note that the third-person view is incomplete, as the game developers have not fully implemented it:**  
+- It's highly recommended to enable [Dot Crosshair](https://www.nexusmods.com/7daystodie/mods/5640) and [Immersive Crosshair](https://www.nexusmods.com/7daystodie/mods/5601) for a better experience while in third-person mode.
+  - These mods will properly hide the crosshair when in first person view, while enabling when in third person view, giving you the best of both worlds.
+  - Refer to the [screenshots tab](https://staticdelivery.nexusmods.com/mods/1059/images/5903/5903-1724496760-686489418.jpeg) for examples.
+- Game Version: 1.0. Install with [Vortex](https://www.nexusmods.com/about/vortex/).
+   
+### Incomplete third person view
+> Note that the third-person view is incomplete, as the game developers have not fully implemented it  
   - Bow animations, are unfinished (static). 
   - Although knife animations are working, they are not hitting anything. Thanks to [lM3Rl](https://www.nexusmods.com/7daystodie/mods/5903?tab=posts&jump_to_comment=143233440) for reporting this issue.
+    - Power attacks are not hitting enemies.
+  - When I spam power attack with club, animation stops. Thanks to [MrSamuelAdams1992](https://www.nexusmods.com/7daystodie/mods/5903?tab=posts&jump_to_comment=143252268) fore reporting this issue.
+
   - Missing sound when using wrench on cars. Thanks to [Splico](https://www.nexusmods.com/7daystodie/mods/5903?tab=posts&jump_to_comment=143244357) for reporting this issue.
-  - I'll update this as we find more issues; once we have confirmed all the issues, I'll further patch this mod to fix everything code related; for the missing animations someone else with animation expertise can create a mod instead.
-- Patches. The following are patches for the current issues with third person view:
+  - I'll update this as we find more issues. I'll further update this mod to fix anything code related; for the missing animations, however, someone else with animation expertise can create a mod instead.  
+
+
+### Patched
+This mod fixes the following issues, so far, with third person view:
   - Enables the step sounds, which have been disabled by the game developers when not in first person view.
   - Support for controllers.
-- Game Version: 1.0. Install with [Vortex](https://www.nexusmods.com/about/vortex/).
 
 ## Changelog
+#### v1.2.1 25-Aug-24
+- fix: Double tap crouching should only toggle view when using controllers, not a keyboard.
 #### v1.2.0 25-Aug-24
 - feat: Support for controllers: double tap whatever you sneak toggle is mapped to. By default, is the right analog stick.
 #### v1.1.0 24-Aug-24
@@ -38,7 +48,6 @@
 
 ## Pipeline
 > Ordered by priority  
-- Support controllers: Use [right on the d-pad](https://www.nexusmods.com/7daystodie/mods/5903?tab=posts&jump_to_comment=143236233) to toggle the view.
 - Hack to go around the issue with equipment not working, or having no animations:
   - Whenever the player uses a such equipment, force the camera back to first person. 
   - On next iteration, integrate Gears, to allow the players to disable this feature if they don't want to use it.
@@ -48,7 +57,6 @@
 - Provide the options to zoom in or out.
 - Missing animations for bows; help needed, or some other developer create this mod separately.
 - Missing sound when using wrench on cars
-
 
 ***
 

@@ -12,27 +12,40 @@ Enables the third person view mode; now with support for controllers.
 [*] Activates third-person view mode with the Alt key.
 [list]
 [*] Support for controllers: double tap whatever you sneak toggle is mapped to. By default, is the right analog stick.[/list]
-[*] It's highly recommended to enable [url=https://www.nexusmods.com/7daystodie/mods/5640]Dot Crosshair[/url] and [url=https://www.nexusmods.com/7daystodie/mods/5601]Immersive Crosshair[/url] for a better experience while in third-person mode. 
-[list]
-[*] These mods will properly hide the crosshair when in first person view, while enabling when in third person view, giving you the best of both worlds. 
-[*] Refer to the [url=https://staticdelivery.nexusmods.com/mods/1059/images/5903/5903-1724496760-686489418.jpeg]screenshots tab[/url] for examples.[/list]
 [*] To remap the Alt key: go to Options -> Keyboard/Mouse -> Edit Mode -> Change Camera.
 [list]
 [*] This is especially recommended if you use Alt+Tab to switch between windows.
 [*] If you are interested to remap this for the controller as well, please leave a comment with your use case.[/list]
-[*] [b]Note that the third-person view is incomplete, as the game developers have not fully implemented it:[/b]
+[*] It's highly recommended to enable [url=https://www.nexusmods.com/7daystodie/mods/5640]Dot Crosshair[/url] and [url=https://www.nexusmods.com/7daystodie/mods/5601]Immersive Crosshair[/url] for a better experience while in third-person mode.
+[list]
+[*] These mods will properly hide the crosshair when in first person view, while enabling when in third person view, giving you the best of both worlds.
+[*] Refer to the [url=https://staticdelivery.nexusmods.com/mods/1059/images/5903/5903-1724496760-686489418.jpeg]screenshots tab[/url] for examples.[/list]
+[*] Game Version: 1.0. Install with [url=https://www.nexusmods.com/about/vortex/]Vortex[/url].
+[/list]
+[size=4]Incomplete third person view[/size]
+[quote]
+Note that the third-person view is incomplete, as the game developers have not fully implemented it
+[/quote]
 [list]
 [*] Bow animations, are unfinished (static). 
 [*] Although knife animations are working, they are not hitting anything. Thanks to [url=https://www.nexusmods.com/7daystodie/mods/5903?tab=posts&jump_to_comment=143233440]lM3Rl[/url] for reporting this issue.
+[list]
+[*] Power attacks are not hitting enemies.[/list]
+[*] When I spam power attack with club, animation stops. Thanks to [url=https://www.nexusmods.com/7daystodie/mods/5903?tab=posts&jump_to_comment=143252268]MrSamuelAdams1992[/url] fore reporting this issue.
 [*] Missing sound when using wrench on cars. Thanks to [url=https://www.nexusmods.com/7daystodie/mods/5903?tab=posts&jump_to_comment=143244357]Splico[/url] for reporting this issue.
-[*] I'll update this as we find more issues; once we have confirmed all the issues, I'll further patch this mod to fix everything code related; for the missing animations someone else with animation expertise can create a mod instead.[/list]
-[*] Patches. The following are patches for the current issues with third person view:
+[*] I'll update this as we find more issues. I'll further update this mod to fix anything code related; for the missing animations, however, someone else with animation expertise can create a mod instead.  
+[/list]
+
+[size=4]Patched[/size]
+This mod fixes the following issues, so far, with third person view:
 [list]
 [*] Enables the step sounds, which have been disabled by the game developers when not in first person view.
-[*] Support for controllers.[/list]
-[*] Game Version: 1.0. Install with [url=https://www.nexusmods.com/about/vortex/]Vortex[/url].
+[*] Support for controllers.
 [/list]
 [size=5]Changelog[/size]
+[size=3]v1.2.1 25-Aug-24[/size]
+[list]
+[*] fix: Double tap crouching should only toggle view when using controllers, not a keyboard.[/list]
 [size=3]v1.2.0 25-Aug-24[/size]
 [list]
 [*] feat: Support for controllers: double tap whatever you sneak toggle is mapped to. By default, is the right analog stick.[/list]
@@ -51,7 +64,6 @@ Enables the third person view mode; now with support for controllers.
 Ordered by priority
 [/quote]
 [list]
-[*] Support controllers: Use [url=https://www.nexusmods.com/7daystodie/mods/5903?tab=posts&jump_to_comment=143236233]right on the d-pad[/url] to toggle the view.
 [*] Hack to go around the issue with equipment not working, or having no animations:
 [list]
 [*] Whenever the player uses a such equipment, force the camera back to first person. 

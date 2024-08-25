@@ -1,5 +1,6 @@
 using System;
 using HarmonyLib;
+using InControl;
 using UnityEngine;
 
 namespace ThirdPersonView.Harmony
@@ -17,16 +18,9 @@ namespace ThirdPersonView.Harmony
 
         public static void Postfix(PlayerMoveController __instance)
         {
-            Logger.Info("Postfix called in SetThirdPersonView.");
-
             var playerInput = __instance.playerInput;
-            Logger.Info("Player input captured.");
-
             var entityPlayerLocal = __instance.entityPlayerLocal;
-            Logger.Info("EntityPlayerLocal captured.");
-
             var isDrivingVehicle = entityPlayerLocal.AttachedToEntity != null;
-            Logger.Info($"isDrivingVehicle evaluated to: {isDrivingVehicle}");
 
             if (isDrivingVehicle)
             {
@@ -40,7 +34,6 @@ namespace ThirdPersonView.Harmony
                 entityPlayerLocal.SwitchFirstPersonView(false);
                 Logger.Info("Switched to third-person view while driving a vehicle.");
                 _isFirstPersonView = false;
-                Logger.Info("_isFirstPersonView set to false.");
                 return;
             }
 
@@ -50,15 +43,15 @@ namespace ThirdPersonView.Harmony
                 Logger.Info($"_isFirstPersonView initialized to: {_isFirstPersonView}");
             }
 
-            var controllerUsed = playerInput.ControllerRebindableActions
-                .Find(action => action.WasReleased && action.Name == "ToggleCrouch");
-
-            Logger.Info($"ControllerUsed evaluated to: {controllerUsed != null}");
+            var controllerUsed = playerInput.ControllerRebindableActions.Find(action =>
+                action.LastDeviceClass == InputDeviceClass.Controller &&
+                action.WasReleased &&
+                action.Name == "ToggleCrouch"
+            );
 
             if (controllerUsed != null)
             {
                 var currentTime = Time.time;
-                Logger.Info($"Current time: {currentTime}");
 
                 if (_controllerActivatedAt >= 0f && (currentTime - _controllerActivatedAt) <= DoubleTapTimeWindow)
                 {
@@ -68,9 +61,7 @@ namespace ThirdPersonView.Harmony
                     Logger.Info("First-person view toggled via controller double-tap.");
                 }
 
-                // Update the time when the controller action was activated
                 _controllerActivatedAt = currentTime;
-                Logger.Info($"_controllerActivatedAt updated to: {_controllerActivatedAt}");
                 return;
             }
 
@@ -85,12 +76,10 @@ namespace ThirdPersonView.Harmony
             if (!playerInput.CameraChange.IsPressed)
             {
                 _cameraChangeHandled = false;
-                Logger.Info("_cameraChangeHandled reset to false.");
             }
 
             if (entityPlayerLocal.bFirstPersonView == _isFirstPersonView)
             {
-                Logger.Info("No view change necessary. Exiting.");
                 return;
             }
 
