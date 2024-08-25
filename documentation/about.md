@@ -52,7 +52,8 @@ This mod fixes the following issues, so far, with third person view:
   - On next iteration, integrate Gears, to allow the players to disable this feature if they don't want to use it.
   - [Thanks & Credits for the idea to tositek](https://www.nexusmods.com/7daystodie/mods/5903?tab=posts&jump_to_comment=143244432)
 - Knife attacks are not interacting/hitting. [Source](https://www.nexusmods.com/7daystodie/mods/5903?tab=posts&jump_to_comment=143245773)
+- Power attacks not hitting. 
 - After releasing the zoom in button holding a weapon, the game snaps the camera too fast. Smoothen this out to improve the UX.
 - Provide the options to zoom in or out.
-- Missing animations for bows; help needed, or some other developer create this mod separately.
-- Missing sound when using wrench on cars
+- Missing animations for bows; help needed, or some other developer to create this mod separately.
+- Missing sound when using wrench on cars.
