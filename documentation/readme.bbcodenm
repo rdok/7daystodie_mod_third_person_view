@@ -19,20 +19,23 @@ Enables the third person view mode; now with support for controllers.
 [*] To remap the Alt key: go to Options -> Keyboard/Mouse -> Edit Mode -> Change Camera.
 [list]
 [*] This is especially recommended if you use Alt+Tab to switch between windows.
-[*] If you would like controller support, please post a request, specifying which button you'd prefer for mapping.
 [*] If you are interested to remap this for the controller as well, please leave a comment with your use case.[/list]
 [*] [b]Note that the third-person view is incomplete, as the game developers have not fully implemented it:[/b]
 [list]
 [*] Bow animations, are unfinished (static). 
 [*] Although knife animations are working, they are not hitting anything. Thanks to [url=https://www.nexusmods.com/7daystodie/mods/5903?tab=posts&jump_to_comment=143233440]lM3Rl[/url] for reporting this issue.
-[*] I'll update this as we find more issues; once we have confirmed all the issues, I'll further patch this mod to fix everything code related; for the missing animations someone else with animation expertise can create a mod for that.
-[*] Patched: Enables the step sounds, which have been disabled by the game developers when not in first person view.[/list]
+[*] Missing sound when using wrench on cars. Thanks to [url=https://www.nexusmods.com/7daystodie/mods/5903?tab=posts&jump_to_comment=143244357]Splico[/url] for reporting this issue.
+[*] I'll update this as we find more issues; once we have confirmed all the issues, I'll further patch this mod to fix everything code related; for the missing animations someone else with animation expertise can create a mod instead.[/list]
+[*] Patches. The following are patches for the current issues with third person view:
+[list]
+[*] Enables the step sounds, which have been disabled by the game developers when not in first person view.
+[*] Support for controllers.[/list]
 [*] Game Version: 1.0. Install with [url=https://www.nexusmods.com/about/vortex/]Vortex[/url].
 [/list]
 [size=5]Changelog[/size]
 [size=3]v1.2.0 25-Aug-24[/size]
 [list]
-[*] feat: Support for controllers: double tap whatever you sneak toggle is mapped two. By default, is the right analog stick.[/list]
+[*] feat: Support for controllers: double tap whatever you sneak toggle is mapped to. By default, is the right analog stick.[/list]
 [size=3]v1.1.0 24-Aug-24[/size]
 [list]
 [*] feat: Enables the step sounds, which have been disabled by the game developers when in third person view.[/list]
