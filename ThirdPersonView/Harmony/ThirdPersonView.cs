@@ -6,23 +6,23 @@ namespace ThirdPersonView.Harmony
     [HarmonyPatch(typeof(PlayerMoveController), nameof(PlayerMoveController.Update))]
     public class SetThirdPersonView
     {
-        private static bool? _isFirstPersonView = null;
+        private static bool? _isFirstPersonView;
+        private static bool _cameraChangeHandled;
+
         private static DateTime _controllerActivatedAt = DateTime.MinValue;
-        private static readonly ILogger Logger = new Logger();
-        private const float DoubleTapTimeWindow = .5f; // Double tap detection window (in seconds)
+        private const float DoubleTapTimeWindow = .5f; 
 
         public static void Postfix(PlayerMoveController __instance)
         {
             var playerInput = __instance.playerInput;
             var entityPlayerLocal = __instance.entityPlayerLocal;
-
             var isDrivingVehicle = entityPlayerLocal.AttachedToEntity != null;
 
             if (isDrivingVehicle)
             {
                 if (!entityPlayerLocal.bFirstPersonView) return;
 
-                entityPlayerLocal.SwitchFirstPersonView(false); // Switch to third-person view
+                entityPlayerLocal.SwitchFirstPersonView(false);
                 _isFirstPersonView = false;
                 return;
             }
@@ -32,27 +32,35 @@ namespace ThirdPersonView.Harmony
                 _isFirstPersonView = entityPlayerLocal.bFirstPersonView;
             }
 
-            var controllerActivate = playerInput.ControllerRebindableActions
+            var controllerUsed = playerInput.ControllerRebindableActions
                 .Find(action => action.WasReleased && action.Name == "ToggleCrouch");
 
-            if (controllerActivate != null)
+            if (controllerUsed != null)
             {
                 var timePassedSinceLastActivatedAt = (DateTime.Now - _controllerActivatedAt).TotalSeconds;
-                Logger.Info($"timePassedSinceLastActivatedAt: {timePassedSinceLastActivatedAt}");
 
                 if (timePassedSinceLastActivatedAt <= DoubleTapTimeWindow)
                 {
-                    _isFirstPersonView = !_isFirstPersonView; 
-                    entityPlayerLocal.SwitchFirstPersonView(_isFirstPersonView.Value);
+                    _isFirstPersonView = !_isFirstPersonView;
+                    entityPlayerLocal.SwitchFirstPersonView(!_isFirstPersonView.Value);
                 }
 
                 _controllerActivatedAt = DateTime.Now;
+
+                return;
             }
 
-            if (entityPlayerLocal.bFirstPersonView != _isFirstPersonView)
+            if (playerInput.CameraChange.IsPressed && !_cameraChangeHandled)
             {
-                entityPlayerLocal.SwitchFirstPersonView(_isFirstPersonView.Value);
+                _isFirstPersonView = !_isFirstPersonView;
+                _cameraChangeHandled = true;
             }
+
+            if (!playerInput.CameraChange.IsPressed) _cameraChangeHandled = false;
+
+            if (entityPlayerLocal.bFirstPersonView == _isFirstPersonView) return;
+
+            entityPlayerLocal.SwitchFirstPersonView(_isFirstPersonView.Value);
         }
     }
 }
