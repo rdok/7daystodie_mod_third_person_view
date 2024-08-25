@@ -25,6 +25,7 @@
 - When I spam power attack with club, animation stops. Thanks to [MrSamuelAdams1992](https://www.nexusmods.com/7daystodie/mods/5903?tab=posts&jump_to_comment=143252268) fore reporting this issue.
 - Impact drive not dissembling. Thanks to [kiosuku1943](https://www.nexusmods.com/7daystodie/mods/5903?tab=posts&jump_to_comment=143263098) for reporting this issue.
 - Missing sound when using wrench on cars. Thanks to [Splico](https://www.nexusmods.com/7daystodie/mods/5903?tab=posts&jump_to_comment=143244357) for reporting this issue.
+- Jittery movement when moving sideways.
 - I'll update this as we find more issues. I'll further update this mod to fix anything code related; for the missing animations, however, someone else with animation expertise can create a mod instead.  
 
 
@@ -54,7 +55,8 @@ This mod fixes the following issues, so far, with third person view:
 - Knife attacks are not interacting/hitting. [Source](https://www.nexusmods.com/7daystodie/mods/5903?tab=posts&jump_to_comment=143245773)
 - Power attacks not hitting. 
 - Impact drive not dissembling. 
+- Missing sound when using wrench on cars.
+- Jittery movement when moving sideways. Thanks to [MrSamuelAdams1992](https://www.nexusmods.com/7daystodie/mods/5903?tab=posts&jump_to_comment=1432522680) for reporting this issue.
+- Missing animations for bows; help needed, or some other developer to create this mod separately.
 - After releasing the zoom in button holding a weapon, the game snaps the camera too fast. Smoothen this out to improve the UX.
 - Provide the options to zoom in or out.
-- Missing animations for bows; help needed, or some other developer to create this mod separately.
-- Missing sound when using wrench on cars.
