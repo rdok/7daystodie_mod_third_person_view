@@ -23,6 +23,7 @@ namespace ThirdPersonView.Harmony
                 return true;
             }
 
+
             if (__instance.blockValueStandingOn.isair)
             {
                 return false;
@@ -41,22 +42,25 @@ namespace ThirdPersonView.Harmony
 
                 if (__instance.nextSwimDistance < __instance.distanceSwam ||
                     __instance.nextSwimDistance > __instance.distanceSwam + 1.0f)
+                {
                     __instance.nextSwimDistance = __instance.distanceSwam + 1f;
+                }
 
                 __instance.internalPlayStepSound();
+                return false;
             }
-            else
+
+            var num = Mathf.Sqrt(_distX * _distX + _distZ * _distZ);
+            __instance.distanceWalked += num;
+            __instance.stepDistanceToPlaySound -= num;
+
+            if (__instance.stepDistanceToPlaySound > 0.0f)
             {
-                var num = Mathf.Sqrt(_distX * _distX + _distZ * _distZ);
-                __instance.distanceWalked += num;
-                __instance.stepDistanceToPlaySound -= num;
-
-                if (__instance.stepDistanceToPlaySound > 0.0f)
-                    return false;
-
-                __instance.stepDistanceToPlaySound = __instance.getNextStepSoundDistance();
-                __instance.internalPlayStepSound();
+                return false;
             }
+
+            __instance.stepDistanceToPlaySound = __instance.getNextStepSoundDistance();
+            __instance.internalPlayStepSound();
 
             return false;
         }
