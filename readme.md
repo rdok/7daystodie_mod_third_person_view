@@ -9,13 +9,13 @@
 
 ## Features
 - Activates third-person view mode with the Alt key.
-  - Support for controllers: double tap whatever you sneak toggle is mapped to. By default, is the right analog stick.
-- To remap the Alt key: go to Options -> Keyboard/Mouse -> Edit Mode -> Change Camera.
-  - This is especially recommended if you use Alt+Tab to switch between windows.
-  - If you are interested to remap this for the controller as well, please leave a comment with your use case.
 - Patches
   - Enables the step sounds, which have been disabled by the game developers when not in first person view.
   - Support for controllers.
+- To remap the Alt key: go to Options -> Keyboard/Mouse -> Edit Mode -> Change Camera.
+  - This is especially recommended if you use Alt+Tab to switch between windows.
+  - If you are interested to remap this for the controller as well, please leave a comment with your use case.
+  - Controllers: double tap whatever you sneak toggle is mapped to. By default, is the right analog stick.
 - It's recommended to use [Dot Crosshair](https://www.nexusmods.com/7daystodie/mods/5640) and [Immersive Crosshair](https://www.nexusmods.com/7daystodie/mods/5601) for a better experience while in third-person mode.
   - These mods will properly hide the crosshair when in first person view, while enabling when in third person view, giving you the best of both worlds.
   - Refer to the [screenshots tab](https://staticdelivery.nexusmods.com/mods/1059/images/5903/5903-1724496760-686489418.jpeg) for examples.
